@@ -171,19 +171,20 @@
 <text x="-0.508" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-0.508" y="-1.651" size="0.4064" layer="27">&gt;VALUE</text>
 <wire x1="-1.27" y1="1.2" x2="-1.27" y2="-1.2" width="0.0254" layer="52"/>
-<wire x1="-1.27" y1="-1.2" x2="7.62" y2="-1.2" width="0.0254" layer="52"/>
-<wire x1="7.62" y1="-1.2" x2="7.62" y2="1.2" width="0.0254" layer="52"/>
-<wire x1="7.62" y1="1.2" x2="-1.27" y2="1.2" width="0.0254" layer="52"/>
+<wire x1="-1.27" y1="-1.2" x2="10.16" y2="-1.2" width="0.0254" layer="52"/>
+<wire x1="10.16" y1="-1.2" x2="10.16" y2="1.2" width="0.0254" layer="52"/>
+<wire x1="10.16" y1="1.2" x2="-1.27" y2="1.2" width="0.0254" layer="52"/>
+<pad name="7" x="8.89" y="0.1778" drill="0.7" diameter="1.143" shape="long" rot="R90"/>
 </package>
 </packages>
 <symbols>
 <symbol name="ZIGZAG-ISP">
-<wire x1="-6.35" y1="-17.78" x2="1.27" y2="-17.78" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-17.78" x2="1.27" y2="12.7" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="-27.94" x2="1.27" y2="-27.94" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-27.94" x2="1.27" y2="12.7" width="0.4064" layer="94"/>
 <wire x1="1.27" y1="12.7" x2="-6.35" y2="12.7" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="12.7" x2="-6.35" y2="-17.78" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="12.7" x2="-6.35" y2="-27.94" width="0.4064" layer="94"/>
 <text x="-6.35" y="13.335" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-20.32" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-6.35" y="-30.48" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="MISO" x="-2.54" y="10.16" length="short" direction="pas" function="dot"/>
 <pin name="VCC" x="-2.54" y="5.08" length="short" direction="pas" function="dot"/>
 <pin name="SCK" x="-2.54" y="0" length="short" direction="pas" function="dot"/>
@@ -196,6 +197,8 @@
 <circle x="-1.1938" y="-10.16" radius="1.016" width="0.508" layer="94"/>
 <circle x="-0.8382" y="-5.08" radius="1.016" width="0.508" layer="94"/>
 <circle x="-0.8382" y="-15.24" radius="1.016" width="0.508" layer="94"/>
+<pin name="KEY" x="-2.54" y="-25.4" length="short" direction="pas" function="dot"/>
+<circle x="-0.8382" y="-25.4" radius="1.016" width="0.508" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -207,6 +210,7 @@
 <device name="'" package="ZIGZAG-ISP">
 <connects>
 <connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="KEY" pad="7"/>
 <connect gate="G$1" pin="MISO" pad="1"/>
 <connect gate="G$1" pin="MOSI" pad="4"/>
 <connect gate="G$1" pin="RESET" pad="5"/>
@@ -240,7 +244,7 @@
 <instances>
 <instance part="U$1" gate="G$1" x="12.7" y="22.86" smashed="yes">
 <attribute name="NAME" x="6.35" y="36.195" size="1.778" layer="95"/>
-<attribute name="VALUE" x="6.35" y="2.54" size="1.778" layer="96"/>
+<attribute name="VALUE" x="3.81" y="-7.62" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
